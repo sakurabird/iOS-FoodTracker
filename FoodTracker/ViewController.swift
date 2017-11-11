@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // Use background image repeatedly
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+
     // Handle the text field’s user input through delegate callbacks.
     nameTextField.delegate = self
   }
