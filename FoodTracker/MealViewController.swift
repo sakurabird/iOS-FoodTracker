@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FoodTracker
 //
 //  Created by Sakura on 2017/08/30.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   //MARK: Properties
   @IBOutlet weak var nameTextField: UITextField!
@@ -70,9 +70,5 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     imagePickerController.delegate = self
 
     present(imagePickerController, animated: true, completion: nil	)
-  }
-
-  @IBAction func setDefaultLabelText(_ sender: UIButton) {
-    mealNameLabel.text = "Default Text"
   }
 }
