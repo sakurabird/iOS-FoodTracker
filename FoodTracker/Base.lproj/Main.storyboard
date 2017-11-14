@@ -107,7 +107,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-oC-BXq" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="51.5" y="404" width="240" height="44"/>
+                                        <rect key="frame" x="45.5" y="404" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="HoV-h4-Vhc" id="biz-MI-JdG"/>
                         <outlet property="photoImageView" destination="nvT-VI-b8Z" id="cEs-uq-cxG"/>
+                        <outlet property="ratingControl" destination="vjb-oC-BXq" id="ERF-mf-B2l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
