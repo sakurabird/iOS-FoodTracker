@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="JTG-s8-pbA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wox-ri-zaL">
                             <connections>
-                                <segue destination="u6v-Hb-htl" kind="presentation" id="tVg-1d-DJf"/>
+                                <segue destination="u6v-Hb-htl" kind="presentation" identifier="AddItem" id="tVg-1d-DJf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
