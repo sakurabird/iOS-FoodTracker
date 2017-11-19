@@ -28,6 +28,14 @@ class MealTableViewController: UITableViewController {
       // Load the sample data.
       loadSampleMeals()
     }
+
+    // UIAlertControllerを使ってポップアップダイアログを表示する
+    let alertController = UIAlertController(title: "タイトル", message: "件数:\(meals.count)件", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "close", style: .default, handler: nil)
+    alertController.addAction(defaultAction)
+
+    present(alertController, animated: true, completion: nil)
+
   }
 
   override func didReceiveMemoryWarning() {
