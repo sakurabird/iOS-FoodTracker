@@ -29,8 +29,8 @@ class MealTableViewController: UITableViewController {
       loadSampleMeals()
     }
 
-    // UIAlertControllerを使ってポップアップダイアログを表示する
-    let alertController = UIAlertController(title: "タイトル", message: "件数:\(meals.count)件", preferredStyle: .alert)
+    // UIAlertControllerを使って起動回数をポップアップダイアログを表示する
+    let alertController = UIAlertController(title: "アプリ起動回数", message: "件数:\(UserDefaults.standard.integer(forKey: "appLaunchCount"))件", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "close", style: .default, handler: nil)
     alertController.addAction(defaultAction)
 
