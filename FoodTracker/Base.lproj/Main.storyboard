@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -124,11 +125,18 @@
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="sf6-yX-DRj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tc9-gN-dnJ">
-                            <connections>
-                                <segue destination="qpu-nz-0RU" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Tys-pC-Qa0"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="tc9-gN-dnJ">
+                                <connections>
+                                    <segue destination="qpu-nz-0RU" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Tys-pC-Qa0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="dSH-19-ljs">
+                                <connections>
+                                    <action selector="share:" destination="BYZ-38-t0r" id="PjX-fb-sbY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="HoV-h4-Vhc" id="biz-MI-JdG"/>

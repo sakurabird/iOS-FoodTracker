@@ -82,6 +82,10 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
   }
 
   //Mark: Navigation
+
+  @IBAction func share(_ sender: UIBarButtonItem) {
+  }
+  
   @IBAction func cancel(_ sender: UIBarButtonItem) {
 
     // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed  in two different ways.
