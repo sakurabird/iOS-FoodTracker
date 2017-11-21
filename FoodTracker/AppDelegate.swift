@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+
+    // UserDefaultsを使ってアプリ内にデータを保存する
+    var launchCount = 0
+
+    if UserDefaults.standard.integer(forKey: "appLaunchCount") > 0 {
+      launchCount = UserDefaults.standard.integer(forKey: "appLaunchCount")
+    }
+    os_log("%@", "起動回数:\(String(launchCount))回目")
+    launchCount += 1
+    UserDefaults.standard.set(launchCount, forKey: "appLaunchCount")
+
     return true
   }
 
