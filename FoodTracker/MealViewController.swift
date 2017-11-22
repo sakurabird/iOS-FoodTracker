@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import Accounts
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -84,6 +85,31 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
   //Mark: Navigation
 
   @IBAction func share(_ sender: UIBarButtonItem) {
+
+    // 共有する項目
+    let shareText = "Apple - Apple Watch"
+    let shareWebsite = NSURL(string: "https://www.apple.com/jp/watch/")!
+//    let shareImage = UIImage(named: "shareSample.png")!
+
+    let activityItems = [shareText, shareWebsite, nil] as [Any?]
+
+    // 初期化処理
+    let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+
+    // 使用しないアクティビティタイプ
+    let excludedActivityTypes = [
+      UIActivityType.postToFacebook,
+      UIActivityType.postToTwitter,
+      UIActivityType.message,
+      UIActivityType.saveToCameraRoll,
+      UIActivityType.print
+    ]
+
+//    activityVC.excludedActivityTypes = excludedActivityTypes
+
+    // UIActivityViewControllerを表示
+    self.present(activityVC, animated: true, completion: nil)
+
   }
   
   @IBAction func cancel(_ sender: UIBarButtonItem) {
